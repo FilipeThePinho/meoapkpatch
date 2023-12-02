@@ -1,6 +1,6 @@
 # meoapkpatch
 
-release apk ready to run: https://github.com/pushdword/meoapkpatch/releases/tag/release-main-4.8.0
+release apk 4.11.1 (2023-12-02 : Merry Christmas guys!) ready to run: https://github.com/FilipeThePinho/meoapkpatch/releases/download/4.11.1/MEO_4.11.1.apk
 
 note: you have to install it via ADB. First enable USB debug and you can install over the network via ./adb connect IP; ./adb install -r file.apk
 
@@ -49,4 +49,9 @@ keytool -genkey -v -keystore meopatch.keystore -alias meopatch -keyalg RSA -keys
 (exists on android SDK)
 meo-patched-zipalign.apk is now signed and ready to install
 
-install meo-patched-zipalign.apk via adb (enable USB debug via developer mode - tap 10x build name on settings -, find the IP address, ./adb connect IP, ./adb install -r meo-patched-zipalign.apk, disable USB debug and develop mode)
+install meo-patched-zipalign.apk via adb (enable USB debug via developer mode - tap 10x build name on settings -, find the IP address, then:
+```shell
+./adb connect <IP>
+./adb install -r meo-patched-zipalign.apk
+```
+Optional but recommended: disable USB debug and develop mode
